@@ -12,9 +12,12 @@ class ViewController: UIViewController
 {
     @IBAction func handleButton(sender: AnyObject)
     {
-        { log("hello") } ~> { log("goodbye") }
+        // NOTE: The semicolons prevent a compiler error
+        // as of Xcode 6 Beta 3.
         
-        { addRange(0..10_000) } ~> { log("sum = \($0)") }
+        { log("hello") } ~> { log("goodbye") };
+        
+        { addRange(0..<10_000) } ~> { log("sum = \($0)") };
     }
 }
 
