@@ -30,8 +30,8 @@ upon completion, the righthand closure on the main thread.
 Passes the background closure's output to the main closure.
 */
 @infix func ~> <R> (
-    backgroundClosure: () -> R?,
-    mainClosure:       (result: R?) -> ())
+    backgroundClosure: () -> R,
+    mainClosure:       (result: R) -> ())
 {
     dispatch_async(_queue) {
         let result = backgroundClosure()
