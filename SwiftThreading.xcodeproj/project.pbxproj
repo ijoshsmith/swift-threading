@@ -14,23 +14,6 @@
 		D062B72E1968A4D500F3AE00 /* Threading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D062B72D1968A4D500F3AE00 /* Threading.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		412A02B01968BCA100E46208 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D062B7031968A45E00F3AE00 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D062B70A1968A45E00F3AE00;
-			remoteInfo = SwiftThreading;
-		};
-		D062B71E1968A45E00F3AE00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D062B7031968A45E00F3AE00 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D062B70A1968A45E00F3AE00;
-			remoteInfo = SwiftThreading;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		D062B70B1968A45E00F3AE00 /* SwiftThreading.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftThreading.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D062B70F1968A45E00F3AE00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,19 +21,11 @@
 		D062B7121968A45E00F3AE00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D062B7151968A45E00F3AE00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D062B7171968A45E00F3AE00 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D062B71D1968A45E00F3AE00 /* SwiftThreadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftThreadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D062B72D1968A4D500F3AE00 /* Threading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Threading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D062B7081968A45E00F3AE00 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D062B71A1968A45E00F3AE00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				D062B70B1968A45E00F3AE00 /* SwiftThreading.app */,
-				D062B71D1968A45E00F3AE00 /* SwiftThreadingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,25 +92,6 @@
 			productReference = D062B70B1968A45E00F3AE00 /* SwiftThreading.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D062B71C1968A45E00F3AE00 /* SwiftThreadingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D062B72A1968A45E00F3AE00 /* Build configuration list for PBXNativeTarget "SwiftThreadingTests" */;
-			buildPhases = (
-				D062B7191968A45E00F3AE00 /* Sources */,
-				D062B71A1968A45E00F3AE00 /* Frameworks */,
-				D062B71B1968A45E00F3AE00 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D062B71F1968A45E00F3AE00 /* PBXTargetDependency */,
-				412A02B11968BCA100E46208 /* PBXTargetDependency */,
-			);
-			name = SwiftThreadingTests;
-			productName = SwiftThreadingTests;
-			productReference = D062B71D1968A45E00F3AE00 /* SwiftThreadingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,10 +103,6 @@
 				TargetAttributes = {
 					D062B70A1968A45E00F3AE00 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					D062B71C1968A45E00F3AE00 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = D062B70A1968A45E00F3AE00;
 					};
 				};
 			};
@@ -169,7 +120,6 @@
 			projectRoot = "";
 			targets = (
 				D062B70A1968A45E00F3AE00 /* SwiftThreading */,
-				D062B71C1968A45E00F3AE00 /* SwiftThreadingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -181,13 +131,6 @@
 			files = (
 				D062B7161968A45E00F3AE00 /* Main.storyboard in Resources */,
 				D062B7181968A45E00F3AE00 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D062B71B1968A45E00F3AE00 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,27 +147,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D062B7191968A45E00F3AE00 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		412A02B11968BCA100E46208 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D062B70A1968A45E00F3AE00 /* SwiftThreading */;
-			targetProxy = 412A02B01968BCA100E46208 /* PBXContainerItemProxy */;
-		};
-		D062B71F1968A45E00F3AE00 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D062B70A1968A45E00F3AE00 /* SwiftThreading */;
-			targetProxy = D062B71E1968A45E00F3AE00 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D062B7141968A45E00F3AE00 /* Main.storyboard */ = {
@@ -339,42 +262,6 @@
 			};
 			name = Release;
 		};
-		D062B72B1968A45E00F3AE00 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwiftThreading.app/SwiftThreading";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftThreadingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		D062B72C1968A45E00F3AE00 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SwiftThreading.app/SwiftThreading";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftThreadingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -392,15 +279,6 @@
 			buildConfigurations = (
 				D062B7281968A45E00F3AE00 /* Debug */,
 				D062B7291968A45E00F3AE00 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D062B72A1968A45E00F3AE00 /* Build configuration list for PBXNativeTarget "SwiftThreadingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D062B72B1968A45E00F3AE00 /* Debug */,
-				D062B72C1968A45E00F3AE00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
