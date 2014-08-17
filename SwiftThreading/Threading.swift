@@ -6,9 +6,13 @@
 //  Copyright (c) 2014 iJoshSmith. All rights reserved.
 //
 
+//
+// This code has been tested against Xcode 6 Beta 5.
+//
+
 import Foundation
 
-infix operator  ~> {}
+infix operator ~> {}
 
 /** 
 Executes the lefthand closure on a background thread and, 
