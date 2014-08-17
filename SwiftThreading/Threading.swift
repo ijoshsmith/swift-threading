@@ -18,11 +18,11 @@ infix operator ~> {}
 Executes the lefthand closure on a background thread and, 
 upon completion, the righthand closure on the main thread. 
 */
- func ~> (
+func ~> (
     backgroundClosure: () -> (),
     mainClosure:       () -> ())
 {
-    dispatch_async(_queue) {
+    dispatch_async(queue) {
         backgroundClosure()
         dispatch_async(dispatch_get_main_queue(), mainClosure)
     }
@@ -33,11 +33,11 @@ Executes the lefthand closure on a background thread and,
 upon completion, the righthand closure on the main thread.
 Passes the background closure's output to the main closure.
 */
- func ~> <R> (
+func ~> <R> (
     backgroundClosure: () -> R,
     mainClosure:       (result: R) -> ())
 {
-    dispatch_async(_queue) {
+    dispatch_async(queue) {
         let result = backgroundClosure()
         dispatch_async(dispatch_get_main_queue(), {
             mainClosure(result: result)
@@ -46,4 +46,4 @@ Passes the background closure's output to the main closure.
 }
 
 /** Serial dispatch queue used by the ~> operator. */
-let _queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)
+private let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)
