@@ -8,13 +8,13 @@
 
 import Foundation
 
-operator infix ~> {}
+infix operator  ~> {}
 
 /** 
 Executes the lefthand closure on a background thread and, 
 upon completion, the righthand closure on the main thread. 
 */
-@infix func ~> (
+ func ~> (
     backgroundClosure: () -> (),
     mainClosure:       () -> ())
 {
@@ -29,7 +29,7 @@ Executes the lefthand closure on a background thread and,
 upon completion, the righthand closure on the main thread.
 Passes the background closure's output to the main closure.
 */
-@infix func ~> <R> (
+ func ~> <R> (
     backgroundClosure: () -> R,
     mainClosure:       (result: R) -> ())
 {
