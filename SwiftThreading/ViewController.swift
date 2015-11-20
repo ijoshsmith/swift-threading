@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController
 {
+    
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+    }
+    
     @IBAction func handleButton(sender: AnyObject)
     {
         // NOTE: The semicolons prevent a compiler error
@@ -24,12 +30,12 @@ class ViewController: UIViewController
 func addRange(range: Range<Int>) -> Int
 {
     log("adding...")
-    return reduce(range, 0, +)
+    return range.reduce(0, combine: +)
 }
 
 func log(message: String)
 {
     let main = NSThread.currentThread().isMainThread
     let name = main ? "[main]" : "[back]"
-    println("\(name) \(message)")
+    print("\(name) \(message)")
 }
