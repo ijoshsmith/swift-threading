@@ -10,16 +10,9 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    
-    
-    override func viewDidLoad(){
-        super.viewDidLoad()
-    }
-    
     @IBAction func handleButton(sender: AnyObject)
     {
-        // NOTE: The semicolons prevent a compiler error
-        // as of Xcode 6 Beta 3.
+        // NOTE: The semicolons prevent a compiler error as of Xcode 7.2
         
         { log("hello") } ~> { log("goodbye") };
         
