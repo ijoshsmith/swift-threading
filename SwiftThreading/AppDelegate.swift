@@ -3,7 +3,7 @@
 //  SwiftThreading
 //
 //  Created by Joshua Smith on 7/5/14.
-//  Copyright (c) 2014 iJoshSmith. All rights reserved.
+//  Copyright (c) 2014 iJoshSmith. Licensed under the MIT License.
 //
 
 import UIKit
