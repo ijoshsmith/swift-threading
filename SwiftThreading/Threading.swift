@@ -23,7 +23,7 @@ func ~> <R> (
     backgroundClosure: () -> R,
     mainClosure:       (result: R) -> ())
 {
-    DispatchQueue.global().async {
+    queue.async {
         let result = backgroundClosure()
         DispatchQueue.main.async {
             mainClosure(result: result)
