@@ -11,6 +11,10 @@ import UIKit
 class Example : NSObject {
     var i = 1
 
+    override init() {
+        super.init()
+        self.doSomethingCrazyAndUpdateUI()
+    }
     func doSomethingCrazyAndUpdateUI() {
         {
             while(self.i < 10000) {
