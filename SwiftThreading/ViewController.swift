@@ -10,25 +10,25 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    @IBAction func handleButton(sender: AnyObject)
+    @IBAction func handleButton(_ sender: AnyObject)
     {
         // NOTE: The semicolons prevent a compiler error as of Xcode 7.2
         
         { log("hello") } ~> { log("goodbye") };
         
-        { addRange(0..<10_000) } ~> { log("sum = \($0)") };
+        { addRange(0..<10_000) } ~> { log($0) };
     }
 }
 
-func addRange(range: Range<Int>) -> Int
+func addRange(_ range: Range<Int>) -> String
 {
     log("adding...")
-    return range.reduce(0, combine: +)
+    return String("\([Int](range.lowerBound..<range.upperBound).reduce(0, +))")
 }
 
-func log(message: String)
+func log(_ message: String)
 {
-    let main = NSThread.currentThread().isMainThread
+    let main = Thread.current.isMainThread
     let name = main ? "[main]" : "[back]"
     print("\(name) \(message)")
 }
