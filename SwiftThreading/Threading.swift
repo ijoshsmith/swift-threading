@@ -19,25 +19,11 @@ infix operator ~>   // serial queue operator
 /**
  Executes the lefthand closure on a background thread and,
  upon completion, the righthand closure on the main thread.
- */
-func ~> (
-    backgroundClosure: @escaping () -> (),
-    mainClosure:       @escaping () -> ())
-{
-    serial_queue.async {
-        backgroundClosure()
-        DispatchQueue.main.async(execute: mainClosure)
-    }
-}
-
-/**
- Executes the lefthand closure on a background thread and,
- upon completion, the righthand closure on the main thread.
  Passes the background closure's output to the main closure.
  */
 func ~> <R> (
-    backgroundClosure:  @escaping () -> R,
-    mainClosure:        @escaping (_ result: R) -> ())
+    backgroundClosure:   @escaping () -> R,
+    mainClosure:         @escaping (_ result: R) -> ())
 {
     serial_queue.async {
         let result = backgroundClosure()
@@ -52,21 +38,10 @@ private let serial_queue = DispatchQueue(label: "serial-worker")
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 infix operator ≠>   // concurrent queue operator
-func ≠> (
-    backgroundClosure: @escaping () -> (),
-    mainClosure:       @escaping () -> ())
-{
-    concurrent_queue.async {
-        backgroundClosure()
-        DispatchQueue.main.async(execute: mainClosure)
-    }
-}
-
 /**
  Executes the lefthand closure on a background thread and,
  upon completion, the righthand closure on the main thread.
  Passes the background closure's output to the main closure.
- 
  */
 func ≠> <R> (
     backgroundClosure: @escaping () -> R,
